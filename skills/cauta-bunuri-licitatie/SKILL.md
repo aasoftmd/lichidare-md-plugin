@@ -18,7 +18,6 @@ Instrumentele vin de la serverul MCP `lichidare-md` din acest plugin.
 3. **Deschide detaliile** cu `get_listing` doar pentru anunturile pe care utilizatorul le alege sau pentru primele 2-3 cele mai potrivite.
 4. **Prezinta rezultatul** ca tabel scurt: titlu, pret de pornire, regiune, procedura, data licitatiei, link. Pentru o singura pozitie, foloseste un paragraf.
 5. **Semnaleaza ce conteaza pentru cumparator:**
-   - daca `times_published` > 1, obiectul nu s-a vandut la expunerile anterioare (argument la negociere sau la urmatoarea runda);
    - data licitatiei apropiata (mai putin de 7 zile): acontul si cererea de participare se depun de regula inainte;
    - pretul afisat este pret de pornire, nu pret final.
 6. **Pasul urmator:** linkul anuntului (contactul vanzatorului e acolo). Daca utilizatorul vrea sa urmareasca categoria, `alert_subscription_link`. Daca vrea sa participe, propune skill-ul `verificare-lot-inainte-de-acont`.

@@ -9,7 +9,7 @@
     "url": "https://lichidare.md"
   },
   "homepage": "https://lichidare.md/claude",
-  "repository": "https://github.com/digitallex-md/lichidare-md-plugin",
+  "repository": "https://github.com/aasoftmd/lichidare-md-plugin",
   "license": "MIT",
   "keywords": ["moldova", "licitatii", "insolvabilitate", "executare silita", "gaj bancar", "imobile", "auctions"],
   "icon": "./logo.png",

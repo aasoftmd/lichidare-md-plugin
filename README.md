@@ -8,8 +8,8 @@ Plugin oficial al platformei [LICHIDARE.MD](https://lichidare.md): catalogul bun
 
 | Instrument | Ce face |
 | --- | --- |
-| `search_listings` | Cautare dupa text, categorie, procedura, regiune, pret, data licitatiei |
-| `get_listing` | Detaliile unui anunt: loturi, preturi de pornire, sursa oficiala, istoricul expunerilor |
+| `search_listings` | Cautare dupa text, categorie, procedura, regiune, interval de pret, doar loturi cu licitatie |
+| `get_listing` | Detaliile unui anunt: loturi, preturi de pornire, data licitatiei, sursa oficiala |
 | `upcoming_auctions` | Licitatiile din urmatoarele N zile |
 | `market_overview` | Statistica agregata a catalogului |
 | `alert_subscription_link` | Link precompletat pentru alerte pe e-mail si canalul Telegram |

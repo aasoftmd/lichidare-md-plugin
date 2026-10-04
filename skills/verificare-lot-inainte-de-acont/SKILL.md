@@ -9,7 +9,7 @@ Scopul este ca utilizatorul sa stie ce sa verifice si unde, nu sa primeasca o op
 
 ## 1. Datele lotului
 
-Apeleaza `get_listing` cu id-ul ales si retine: procedura, vanzatorul si rolul lui, data licitatiei, pretul de pornire, sursa oficiala (`source_url`), numarul de expuneri anterioare (`times_published`).
+Apeleaza `get_listing` cu id-ul ales si retine: procedura, vanzatorul si rolul lui, data licitatiei, pretul de pornire, sursa oficiala (`source_url`).
 
 ## 2. Lista de verificare
 
@@ -37,7 +37,7 @@ Prezinta lista adaptata procedurii. Pentru fiecare punct: ce se verifica, unde, 
 - SFS si primarii: verifica regulamentul licitatiei publicat de organizator.
 
 **Semnale de atentie**
-- `times_published` mare: bunul nu s-a vandut de mai multe ori; afla de ce (pret, stare, litigii).
+- Publicatia oficiala mentioneaza o licitatie repetata sau un pret redus fata de runda anterioara: bunul nu s-a vandut; afla de ce (pret, stare, litigii).
 - Licitatie in mai putin de 5 zile lucratoare: termenul pentru acont poate fi deja depasit.
 
 ## 3. Pasul urmator
