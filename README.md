@@ -40,4 +40,4 @@ Politica de confidentialitate: https://lichidare.md/privacy.php. Rezumat: server
 
 office@lichidare.md, +373 69 072 200, https://lichidare.md/contact.php
 
-Operator: S.R.L. DigitalLex (IDNO 1026600016172).
+Operatorul datelor: Muntean Oleg (persoana fizica), administratorul platformei LICHIDARE.MD. Detalii: https://lichidare.md/privacy.php.

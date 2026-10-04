@@ -4,14 +4,22 @@
   "version": "1.0.0",
   "description": "Bunuri scoase la vanzare in Republica Moldova din insolvabilitate, executare silita, gaj bancar, SFS si licitatii ale primariilor: cautare, detalii loturi, licitatii apropiate si verificarea lotului inainte de acont.",
   "author": {
-    "name": "S.R.L. DigitalLex",
+    "name": "Muntean Oleg",
     "email": "office@lichidare.md",
     "url": "https://lichidare.md"
   },
   "homepage": "https://lichidare.md/claude",
   "repository": "https://github.com/aasoftmd/lichidare-md-plugin",
   "license": "MIT",
-  "keywords": ["moldova", "licitatii", "insolvabilitate", "executare silita", "gaj bancar", "imobile", "auctions"],
+  "keywords": [
+    "moldova",
+    "licitatii",
+    "insolvabilitate",
+    "executare silita",
+    "gaj bancar",
+    "imobile",
+    "auctions"
+  ],
   "icon": "./logo.png",
   "documentationUrl": "https://lichidare.md/claude",
   "supportUrl": "https://lichidare.md/contact.php",
