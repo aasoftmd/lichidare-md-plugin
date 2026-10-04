@@ -12,7 +12,7 @@ Plugin oficial al platformei [LICHIDARE.MD](https://lichidare.md): catalogul bun
 | `get_listing` | Detaliile unui anunt: loturi, preturi de pornire, data licitatiei, sursa oficiala |
 | `upcoming_auctions` | Licitatiile din urmatoarele N zile |
 | `market_overview` | Statistica agregata a catalogului |
-| `alert_subscription_link` | Link precompletat pentru alerte pe e-mail si canalul Telegram |
+| `alert_subscription_link` | Linkul formularului de alerte pe e-mail (criteriile se bifeaza pe formular) si canalul Telegram |
 
 **Skills**
 - `cauta-bunuri-licitatie`: fluxul de cautare si comparare a loturilor
