@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "lichidare-md": {
+      "type": "http",
+      "url": "https://mcp.lichidare.md/mcp"
+    }
+  }
+}
