@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "lichidare-md",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Assets for sale in Moldova from insolvency, enforcement, bank collateral and public auctions: search, lot details, upcoming auctions.",
   "author": {
     "name": "Muntean Oleg",
@@ -35,7 +35,7 @@
         "websiteURL": "https://lichidare.md/claude",
         "supportURL": "https://lichidare.md/contact.php",
         "privacyPolicyURL": "https://lichidare.md/privacy.php#claude",
-        "termsOfServiceURL": "https://lichidare.md/terms.php",
+        "termsOfServiceURL": "https://lichidare.md/terms.php#api",
         "defaultPrompt": [
           "Ce terenuri se vând la licitație în raionul Căușeni?",
           "Какие торги пройдут в ближайшие 14 дней в Кишинёве?",
