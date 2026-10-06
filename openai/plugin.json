@@ -1,0 +1,122 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "lichidare-md",
+  "version": "1.1.0",
+  "description": "Assets for sale in Moldova from insolvency, enforcement, bank collateral and public auctions: search, lot details, upcoming auctions.",
+  "author": {
+    "name": "Muntean Oleg",
+    "email": "office@lichidare.md",
+    "url": "https://lichidare.md"
+  },
+  "homepage": "https://lichidare.md/claude",
+  "repository": "https://github.com/aasoftmd/lichidare-md-plugin",
+  "license": "MIT",
+  "keywords": [
+    "moldova",
+    "auctions",
+    "insolvency",
+    "enforcement",
+    "bank collateral",
+    "real estate",
+    "licitatii",
+    "торги"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "LICHIDARE.MD",
+        "shortDescription": "Moldova auctions & assets",
+        "longDescription": "Read-only access to the LICHIDARE.MD catalog of assets put up for sale in the Republic of Moldova through insolvency proceedings, court enforcement, bank collateral, State Tax Service confiscations and municipal auctions. Search listings by keyword, category, procedure, region and price; open a listing with its lots, starting prices, auction date and the official source; see upcoming auctions and market statistics; get the link to e-mail alerts about new lots. No account and no authentication. Seller phone numbers and e-mails are never returned: contact goes through the listing page. Data come from official public sources and are informative; the official publication indicated in each listing has legal force. Questions can be asked in Romanian, Russian or English.",
+        "developerName": "LICHIDARE.MD (Muntean Oleg)",
+        "category": "Business",
+        "capabilities": [
+          "Read"
+        ],
+        "websiteURL": "https://lichidare.md/claude",
+        "supportURL": "https://lichidare.md/contact.php",
+        "privacyPolicyURL": "https://lichidare.md/privacy.php#claude",
+        "termsOfServiceURL": "https://lichidare.md/terms.php",
+        "defaultPrompt": [
+          "Ce terenuri se vând la licitație în raionul Căușeni?",
+          "Какие торги пройдут в ближайшие 14 дней в Кишинёве?",
+          "Show apartments for sale at auction in Chișinău under 1 million lei"
+        ],
+        "brandColor": "#D97706",
+        "composerIcon": "./assets/logo.png",
+        "logo": "./assets/logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "RO: search by category and region; the plugin finds active auction listings for agricultural land in a district.",
+              "prompt": "Ce terenuri se vând la licitație în raionul Căușeni?",
+              "tools_triggered": [
+                "search_listings"
+              ],
+              "expected_behavior": "Lists matching active listings (or says none match) with title, starting price, locality, auction date and a link to each listing on lichidare.md."
+            },
+            {
+              "description": "RU: upcoming auctions in a city within a date window.",
+              "prompt": "Какие торги пройдут в ближайшие 14 дней в Кишинёве?",
+              "tools_triggered": [
+                "upcoming_auctions"
+              ],
+              "expected_behavior": "Returns auctions dated within the next 14 days in Chisinau, each with date, title, starting price and listing link."
+            },
+            {
+              "description": "RO: details of one listing by its number, with lots and the official source.",
+              "prompt": "Arată lotul 8896 pe LICHIDARE.MD și spune-mi ce trebuie verificat înainte de licitație",
+              "tools_triggered": [
+                "get_listing"
+              ],
+              "expected_behavior": "Shows listing 8896 (procedure, lots, starting prices, auction date, official source link) and a short pre-auction checklist; no seller phone or e-mail is shown."
+            },
+            {
+              "description": "RU: price-filtered search for vehicles from bank collateral.",
+              "prompt": "Найди автомобили из банковского залога дешевле 200 000 леев",
+              "tools_triggered": [
+                "search_listings"
+              ],
+              "expected_behavior": "Lists vehicle listings from the bank collateral procedure with starting price at most 200 000 MDL, or says none match, with links."
+            },
+            {
+              "description": "RO: market statistics of the catalog.",
+              "prompt": "Câte anunțuri active sunt acum pe LICHIDARE.MD și cum se împart pe categorii?",
+              "tools_triggered": [
+                "market_overview"
+              ],
+              "expected_behavior": "Gives the number of active listings, upcoming auctions and the breakdown by category and procedure."
+            }
+          ],
+          "negative": [
+            {
+              "description": "RO: asks for the seller's phone number. The connector never returns seller contacts; the assistant must point to the listing page instead of inventing or extracting a number.",
+              "prompt": "Dă-mi numărul de telefon al executorului de la lotul 8896"
+            },
+            {
+              "description": "RU: asks to place a bid or buy. The connector is read-only and cannot bid, register or pay; the assistant must say so and point to the official procedure.",
+              "prompt": "Сделай ставку 500 000 леев на лот 8896 от моего имени"
+            },
+            {
+              "description": "RO: asks for personal data of the debtor (personal code, address). The catalog masks such data and the plugin must not try to obtain or guess it.",
+              "prompt": "Care este codul personal și adresa de domiciliu a debitorului din anunțul 8705?"
+            }
+          ]
+        }
+      },
+      "publication": {
+        "translations": {
+          "ro-RO": {
+            "subtitle": "Licitații și bunuri, Moldova",
+            "description": "Acces doar de citire la catalogul LICHIDARE.MD: bunuri scoase la vânzare în Republica Moldova din insolvabilitate, executare silită, gaj bancar, confiscări SFS și licitațiile primăriilor. Căutare după cuvinte, categorie, procedură, raion și preț; detaliile anunțului cu loturi, prețuri de pornire, data licitației și sursa oficială; licitațiile din zilele următoare; statistica pieței. Fără cont. Contactele vânzătorilor nu se transmit."
+          },
+          "ru-RU": {
+            "subtitle": "Торги и имущество Молдовы",
+            "description": "Доступ только на чтение к каталогу LICHIDARE.MD: имущество, выставленное на продажу в Республике Молдова, из несостоятельности, исполнительного производства, банковского залога, конфискаций ГНС и торгов примэрий. Поиск по словам, категории, процедуре, району и цене; объявление с лотами, стартовыми ценами, датой торгов и официальным источником; ближайшие торги; статистика рынка. Без учётной записи. Контакты продавцов не передаются."
+          }
+        }
+      }
+    }
+  }
+}
